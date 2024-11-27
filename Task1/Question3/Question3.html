@@ -1,0 +1,99 @@
+<!-- Question 3: Design a contact us form with all fields as required. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <style>
+        body{
+            background-image: url('background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;           
+            font-weight: bold;
+        }
+        h1{
+            text-align: center; 
+            margin-top: 20px;
+            color: yellowgreen;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 50px;
+            margin-top: 100px;
+        }
+        form{
+            width: 280px;
+            border: 2px solid yellowgreen;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            padding-right: 50px;
+            margin-top: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        form input,form label{
+            margin-left: 17px;
+        }
+        form input:hover{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+        .contact{      
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 20px;
+            color: black;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        #firstname,#lastname,#email{
+            width: 250px;
+            height: 30px;
+        }
+
+        button{
+            color: white;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            background-color: green;
+            border: none;
+            margin-left: 70px;
+            border-radius: 10px;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <h1>Contact Us Page</h1>
+        <div class="contact">           
+            <form>
+                <label for="firstname">First Name</label><br><br>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" autocomplete="off"><br><br>
+                <label for="lastname">Last Name</label><br><br>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" autocomplete="off"><br><br>
+                <label for="email">Email</label><br><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email id" autocomplete="off"><br><br>
+                <label for="gender">Gender</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male" style="font-size: 12px;">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female" style="font-size: 12px;">Female</label><br><br>
+                <button type="submit">Contact us</button>
+            </form>
+        </div>
+        <footer>
+            <p>Contact details: mobiya2001@gmail.com. ph. no: 9748264xxx</p>
+        </footer>
+    </body>
+</html>

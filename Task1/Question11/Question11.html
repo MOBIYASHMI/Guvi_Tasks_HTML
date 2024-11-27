@@ -1,0 +1,137 @@
+<!-- Question 11: Create an HTML page, which should contain all types of input elements. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form input types</title>
+    </head>
+    <style>
+        body{
+            background-color: whitesmoke;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0 0 10px 0;
+        }
+        h1{
+            text-align: center;
+            background-color: black;
+            margin: 0;
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+        form{
+            width: 700px;
+            margin: auto;
+            background-color: rgb(133, 16, 40);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(2, 2, 2,0.1);
+        }
+        .form-inputs{
+            margin-bottom: 15px;
+        }
+        .form-inputs label{
+            display: block;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .form-inputs input,.form-inputs textarea,.form-inputs select{
+            margin-top: 5px;
+            width: 100%;
+            height: 30px;
+            border: 1px solid wheat;
+            border-radius: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            color: gray;
+        }
+        .form-inputs input[type="radio"],
+        .form-inputs input[type="checkbox"]{
+            width: auto;
+        }
+
+        .form-inputs button{
+            padding: 10px;
+            background-color: rgb(0, 0, 255);
+            color: white;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+        .form-inputs button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+    <body>
+        <h1>Form with all input elements</h1>
+        <form>
+            <div class="form-inputs">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="off">
+            </div>
+            <div class="form-inputs">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            <div class="form-inputs">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email Id" autocomplete="off">
+            </div>
+            <div class="form-inputs">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age">
+            </div>
+            <div class="form-inputs">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-inputs">
+                <label for="color">Color</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div class="form-inputs">
+                <label for="file">File</label>
+                <input type="file" id="file" name="file">
+            </div>
+            <div class="form-inputs">
+                <label for="range">Range</label>
+                <input type="range" id="range" name="range">
+            </div>
+            <div class="form-inputs">
+                <label for="gender" style="margin-bottom: -5px;">Gender</label>
+                <input type="radio" id="male" name="gender" style="display: inline-block;position: relative;top: 10px;">
+                <label for="gender" style="display: inline-flex;">Male</label>
+                <input type="radio" id="female" name="gender" style="display: inline-block;position: relative;top: 10px;">
+                <label for="gender" style="display: inline-flex;">Female</label>
+            </div>
+            <div class="form-inputs">
+                <label for="relationship" style="margin-bottom: -5px;">Relationship Status</label>
+                <input type="checkbox" id="male" name="relationship" style="display: inline-block;position: relative;top: 10px;">
+                <label for="relationship" style="display: inline-flex;">Married</label>
+                <input type="checkbox" id="female" name="relationship" style="display: inline-block;position: relative;top: 10px;">
+                <label for="relationship" style="display: inline-flex;">Single</label>
+                <input type="checkbox" id="female" name="relationship" style="display: inline-block;position: relative;top: 10px;">
+                <label for="relationship" style="display: inline-flex;">Divorcee</label>
+            </div>
+            <div class="form-inputs">
+                <label for="occupation">Occupation Sector</label>
+                <select id="occupation" name="occupation">
+                    <option value="business">Own Business</option>
+                    <option value="public">Public Sector</option>
+                    <option value="private">Private Sector</option>
+                </select>
+            </div>
+            <div class="form-inputs">
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback">Enter you feedback</textarea>
+            </div>
+            <div class="form-inputs">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
