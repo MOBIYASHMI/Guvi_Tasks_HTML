@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #d8e1d6;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar search search"
+    "sidebar cards cards"
+    "sidebar main main";
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
+  row-gap: 60px;
+  column-gap: 200px;
+}
+
+.header {
+  grid-area: header;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+}
+.header h1 {
+  text-align: center;
+}
+.header img {
+  position: absolute;
+  left: 30px;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2d2d2e;
+  border-radius: 10px;
+  position: relative;
+  left: 30px;
+  height: 100%;
+}
+
+.search {
+  grid-area: search;
+  background-color: #2d2d2e;
+  color: rgb(201, 201, 201);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  font-size: 16px;
+  margin: 0 100px 0 50px;
+}
+
+.cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  right: 40px;
+}
+
+.card {
+  background-color: #2d2d2e;
+  border-radius: 10px;
+  height: 250px;
+
+}
+
+.main {
+  grid-area: main;
+  background-color: #2d2d2e;
+  border-radius: 10px;
+  position: relative;
+  right: 40px;
+  height: 250px;
+}
+
+@media only screen  and (max-width:800px){
+  .container{
+    display: grid;
+    grid-template-areas:
+      "header"
+      "search"
+      "sidebar"
+      "cards"
+      "main";
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto;
+    row-gap: 40px;
+  } 
+  .header {
+    grid-area: header;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+  } 
+  .search {
+    grid-area: search;
+    background-color: #2d2d2e;
+    color: rgb(201, 201, 201);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    font-size: 16px;
+    margin: 0 50px 0 50px;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #2d2d2e;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    height: 250px;
+  }
+  .cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    position: relative;
+    left: 30px;
+  }
+  
+  .card {
+    background-color: #2d2d2e;
+    border-radius: 10px;
+    height: 200px;
+  }
+
+  .main {
+    grid-area: main;
+    background-color: #2d2d2e;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    left: 30px;
+    height: 250px;
+    bottom: 10px;
+  }
+}
